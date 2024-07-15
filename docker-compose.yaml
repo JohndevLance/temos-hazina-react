@@ -1,8 +1,18 @@
+version: "3.7"
+
 services:
-  sales:
-    build : ./temos
-    container_name: temos_c
+  react-app:
+    build:
+      context: .
+      dockerfile: ./DockerFile
+    container_name: my-react-app
     ports:
-      - '3000:3000'
-    stdin_open: true
-    tty: true
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - react-network
+
+networks:
+  react-network:
+    driver: bridge
