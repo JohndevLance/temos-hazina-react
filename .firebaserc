@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "temos-frontend",
+    "staging": "temos-frontend"
+  },
+  "targets": {},
+  "etags": {}
+}
